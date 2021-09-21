@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Alarm | Stopwatch</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Expletus+Sans&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <button id="set-alarmTabButton" onclick="changeTab('set-alarm')">Set Alarm</button>
+            <button id="set-stopwatchTabButton" onclick="changeTab('set-stopwatch')">Set Stopwatch</button>
+        </header>
+        <main>
+            <div id="set-alarm">
+                <div class="time">
+                    <div id="time-hour">14</div> : 
+                    <div id="time-minute">21</div> : 
+                    <div id="time-seconds">55</div>
+                </div>
+                <form>
+                    <div class="alarm-input">
+                        <input type="number" size="2" placeholder="HH" id="alarm-input-hour" min="0" max="23"> :  
+                        <input type="number" size="2" placeholder="MM" id="alarm-input-minute" min="0" max="59"> : 
+                        <input type="number" size="2" placeholder="SS" id="alarm-input-second" min="0" max="59">
+                    </div>
+                    <div class="alarm-submit"><input type="submit" value="Set Alarm"></div>
+                </form>
+            </div>
+            <div id="set-stopwatch">
+                <div class="stopwatch-display">
+                    <svg height="400" width="400" >
+                        <circle cx="200" cy="200" r="180" stroke="#6C534E" stroke-width="20" fill="transparent" />
+                        <circle id="stopwatch-border" stroke-linecap="round" cx="200" cy="200" r="180" stroke="#DBB3B1" stroke-width="10" fill="transparent" />
+                        <text x="50%" y="50%" text-anchor="middle" id="stopwatch-time" font-size="100px" fill="#A67F8E" stroke-width="2px" dy="0.3em">23 : 20</text>
+                    </svg>
+                </div>
+                <div class="stopwatch-input">
+                    <input type="number" size="2" placeholder="MM" id="stopwatch-input-minute" min="0" max="59"> : 
+                    <input type="number" size="2" placeholder="SS" id="stopwatch-input-second" min="0" max="59">
+                </div>
+                <div class="stopwatch-submit"><input type="submit" value="Set Stopwatch"></div>
+            </div>
+        </main>
+    </body>
+    <script src="script.js"></script>
+</html>

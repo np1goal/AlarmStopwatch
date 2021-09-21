@@ -1,0 +1,129 @@
+*:focus {
+    outline: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('images/building-desktop.png');
+    background-size: cover;
+}
+
+
+header {
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 0;
+}
+
+header button {
+    border: 0;
+    height: 5vh;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 3vh;
+    color: #DBB3B1;
+    background-color: #6C534E;
+}
+
+header button:nth-child(1) {
+    margin-left: 5vw;
+    color: #2C1A1D;
+    background-color: #DBB3B1;
+}
+
+header button:nth-child(2) {
+    margin-right: 5vw;
+}
+
+.time {
+    padding: 15vh 0;
+    color: #C89FA3;
+    font-size: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+.time div {
+    margin: 0 3vw;
+}
+
+.alarm-input, .stopwatch-input {
+    height: 10vh;
+    font-size: 60px;
+    color: #DBB3B1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.alarm-input input, .stopwatch-input input {
+    height: 80px;
+    width: 150px;
+    font-size: 80px;
+    margin: 0 3vh;
+    padding-top: 20px;
+    border: 0;
+    text-align: center;
+    color: #A67F8E;
+    background-color: transparent;
+    font-family: 'Expletus Sans', cursive;
+}
+
+.alarm-input input::placeholder {
+    color: #6C534E;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.alarm-submit, .stopwatch-submit {
+    padding: 10vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alarm-submit input[type=submit], .stopwatch-submit input[type=submit] {
+    border: 0;
+    height: 5vh;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 3vh;
+    color: #2C1A1D;
+    background-color: #DBB3B1;
+}
+
+#set-stopwatch {
+    display: none;
+    height: 60vh;
+    width: 100vw;
+}
+
+.stopwatch-display {
+/*    height: 400px;*/
+    width: 100vw;
+    margin: 5vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stopwatch-border {
+    stroke-dasharray: 1131;
+    stroke-dashoffset: 1131;
+    border-radius: 10px;
+}
+
+#stopwatch-time {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
