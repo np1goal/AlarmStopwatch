@@ -7,7 +7,8 @@ body {
     margin: 0;
     height: 100vh;
     width: 100vw;
-    background-image: url('images/building-desktop.png');
+    overflow-y: hidden;
+    background-image: url('images/fireplace.png');
     background-size: cover;
 }
 
@@ -87,20 +88,25 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .alarm-submit, .stopwatch-submit {
-    padding: 10vh 0;
+    padding: 4vh 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.alarm-submit input[type=submit], .stopwatch-submit input[type=submit] {
+.alarm-submit input[type=button], .stopwatch-submit input[type=submit] {
     border: 0;
     height: 5vh;
     width: 150px;
+    margin: 0 1vw;
     cursor: pointer;
     border-radius: 3vh;
     color: #2C1A1D;
     background-color: #DBB3B1;
+}
+
+#reset-alarm-button {
+    display: none;
 }
 
 #set-stopwatch {
@@ -126,4 +132,46 @@ input[type=number]::-webkit-inner-spin-button {
 
 #stopwatch-time {
     font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+#error-stopwatch {
+    text-align: center;
+    color: coral;
+    padding-top: 2vh;
+    height: 20px;
+    font-size: 12px;
+    font-family: 'Expletus Sans', cursive;
+}
+
+#pause-stopwatch-button {
+    display: none;
+}
+
+.reference {
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 8px;
+    color: #DBB3B1;
+    font-family: 'Expletus Sans', cursive;
+}
+
+a {
+    text-decoration: none;
+    color: #DBB3B1;
+}
+
+@media screen and (max-width: 635px) {
+    body {
+        display: none;
+    }
+}
+
+
+@media screen and (max-height: 749px) {
+    body {
+        display: none;
+    }
 }

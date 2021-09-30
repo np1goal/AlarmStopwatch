@@ -14,9 +14,9 @@
         <main>
             <div id="set-alarm">
                 <div class="time">
-                    <div id="time-hour">14</div> : 
-                    <div id="time-minute">21</div> : 
-                    <div id="time-seconds">55</div>
+                    <div id="time-hour"></div> : 
+                    <div id="time-minute"></div> : 
+                    <div id="time-seconds"></div>
                 </div>
                 <form>
                     <div class="alarm-input">
@@ -24,22 +24,25 @@
                         <input type="number" size="2" placeholder="MM" id="alarm-input-minute" min="0" max="59"> : 
                         <input type="number" size="2" placeholder="SS" id="alarm-input-second" min="0" max="59">
                     </div>
-                    <div class="alarm-submit"><input type="submit" value="Set Alarm"></div>
+                    <div class="alarm-submit"><input type="button" onclick="setAlarm()" id="set-alarm-button" value="Set Alarm"><input type="button" onclick="resetAlarm()" id="reset-alarm-button" value="Reset Alarm"></div>
                 </form>
+                <div class="reference">The audios included belongs to <a href="https://www.bensound.com">https://www.bensound.com</a></div>
             </div>
             <div id="set-stopwatch">
                 <div class="stopwatch-display">
                     <svg height="400" width="400" >
                         <circle cx="200" cy="200" r="180" stroke="#6C534E" stroke-width="20" fill="transparent" />
                         <circle id="stopwatch-border" stroke-linecap="round" cx="200" cy="200" r="180" stroke="#DBB3B1" stroke-width="10" fill="transparent" />
-                        <text x="50%" y="50%" text-anchor="middle" id="stopwatch-time" font-size="100px" fill="#A67F8E" stroke-width="2px" dy="0.3em">23 : 20</text>
+                        <text x="50%" y="50%" text-anchor="middle" id="stopwatch-time" font-size="100px" fill="#A67F8E" stroke-width="2px" dy="0.3em"></text>
                     </svg>
                 </div>
                 <div class="stopwatch-input">
-                    <input type="number" size="2" placeholder="MM" id="stopwatch-input-minute" min="0" max="59"> : 
-                    <input type="number" size="2" placeholder="SS" id="stopwatch-input-second" min="0" max="59">
+                    <input type="number" size="2" placeholder="MM" id="stopwatch-input-minute"> : 
+                    <input type="number" size="2" placeholder="SS" id="stopwatch-input-second">
                 </div>
-                <div class="stopwatch-submit"><input type="submit" value="Set Stopwatch"></div>
+                <div id="error-stopwatch"></div>
+                <div class="stopwatch-submit"><input id="set-stopwatch-button" type="submit" onclick="setStopwatch()" value="Set Stopwatch"><input id="reset-stopwatch-button" type="submit" onclick="resetStopwatch()" value="Reset Stopwatch"><input id="pause-stopwatch-button" type="submit" onclick="pauseStopwatch()" value="Pause"></div>
+                <div class="reference">The audios included belongs to <a href="https://www.bensound.com" target="_blank">https://www.bensound.com</a></div>
             </div>
         </main>
     </body>
